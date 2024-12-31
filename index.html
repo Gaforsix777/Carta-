@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Animada para Isis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="background">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="flower flower1"></div>
+      <div class="flower flower2"></div>
+      <div class="heart heart1"></div>
+      <div class="heart heart2"></div>
+      <div class="heart heart3"></div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="wings left-wing"></div>
+        <div class="wings right-wing"></div>
+        <div class="envelope">
+          <div class="flap"></div>
+          <p class="message">Para Isis ❤️</p>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-container">
+      <p id="message-text">Nueva carta en:</p>
+      <p id="countdown">3m 0s</p>
+    </div>
+  </div>
+
+  <!-- Audio player -->
+  <audio id="audioPlayer" loop>
+    <source src="./assets/musica.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="download-btn" style="display: none;">Descargar Carta</button>
+  <script src="script.js"></script>
+</body>
+</html>

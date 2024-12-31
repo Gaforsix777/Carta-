@@ -1,0 +1,234 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #ffe4e1; /* Fondo rosado suave */
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cloud {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  animation: float 5s infinite;
+}
+
+.cloud1 {
+  top: 10%;
+  left: 20%;
+}
+
+.cloud2 {
+  top: 30%;
+  right: 25%;
+  animation-delay: 2s;
+}
+
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ff69b4;
+  transform: rotate(45deg);
+  animation: pulse 2s infinite;
+}
+
+.heart1 {
+  top: 50%;
+  left: 10%;
+}
+
+.heart2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.heart3 {
+  top: 70%;
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.heart:before, .heart:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ff69b4;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -20px;
+  left: 0;
+}
+
+.heart:after {
+  top: 0;
+  left: -20px;
+}
+
+.flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ffb6c1;
+  border-radius: 50%;
+  animation: float 4s infinite;
+}
+
+.flower1 {
+  top: 20%;
+  left: 70%;
+}
+
+.flower2 {
+  top: 80%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+/* Card Container */
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 120px;
+}
+
+.wings {
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  animation: flap 2s infinite;
+}
+
+.left-wing {
+  left: -60px;
+  transform: rotate(-30deg);
+}
+
+.right-wing {
+  right: -60px;
+  transform: rotate(30deg);
+}
+
+.envelope {
+  width: 200px;
+  height: 120px;
+  background: white;
+  border: 2px solid #ff69b4;
+  position: relative;
+  overflow: hidden;
+}
+
+.flap {
+  width: 200px;
+  height: 100px;
+  background: #ff69b4;
+  position: absolute;
+  top: -50px;
+  transform: rotateX(45deg);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.message {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+/* Countdown */
+.countdown-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes flap {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 150px;
+    height: 100px;
+  }
+
+  .wings {
+    width: 60px;
+    height: 30px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .countdown-container {
+    font-size: 16px;
+  }
+
+  .cloud {
+    width: 60px;
+    height: 40px;
+  }
+
+  .heart {
+    width: 30px;
+    height: 30px;
+  }
+
+  .flower {
+    width: 40px;
+    height: 40px;
+  }
+}
